@@ -39,7 +39,7 @@ class UsuarioController {
 
     async editProjeto(req, res) {
         await this.uService.editProjeto(req.body)
-        res.send("Alteração Realizada")
+        res.send("Alteração Realizada com Sucesso!")
     }
 
     //Manipulação de Users
