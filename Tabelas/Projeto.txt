@@ -1,0 +1,66 @@
+const Sequelize = require('sequelize');
+const db = require('./db');
+
+const User = db.define('Projeto', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    labelScheme: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	companId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	permissions: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	fase: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	teamlider: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	team: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	clientid: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	hprod: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	hdev: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	totalpages: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	foldersid: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
+});
+
+//Criar a tabela
+User.sync();
+//Verificar se há alguma diferença na tabela, realiza a alteração
+//User.sync({ alter: true })
+
+module.exports = Projeto;

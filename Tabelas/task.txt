@@ -1,0 +1,58 @@
+const Sequelize = require('sequelize');
+const db = require('./db');
+
+const User = db.define('task', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    title: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    description: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	origin: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	assignedto: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	status: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	companyid: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	field: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	projectid: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	tipo: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+	deliverydate: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
+});
+
+//Criar a tabela
+User.sync();
+//Verificar se há alguma diferença na tabela, realiza a alteração
+//User.sync({ alter: true })
+
+module.exports = task;
