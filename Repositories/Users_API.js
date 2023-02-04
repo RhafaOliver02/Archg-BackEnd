@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const UserModel = require("../models/usuario-model");
+const UserModel = require("../models/User");
 const ProjetoModel = require("../models/Projeto");
 const ClienteoModel = require("../models/Client");
 const CompanyModel = require("../models/Company");

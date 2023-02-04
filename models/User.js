@@ -6,6 +6,7 @@ const UsuarioSchema = mongoose.Schema({
     name: String,
     photo: String,
     email: String,
+    token: String,
     companId: String,
     permissions: String,
 

@@ -16,7 +16,7 @@ const Review = require('./models/Review');
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-    res.send("Página inicial teste");
+    res.send("Página inicial teste!");
 });
 
 app.post("/cadUser", async (req, res) => {

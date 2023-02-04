@@ -45,7 +45,7 @@ class UsuarioController {
     //Manipulação de Users
 
     async addUser(req, res) {
-        const usuario = new Usuario(req.body.email, req.body.nome, req.body.senha, req.body.dataCadastro);
+        const usuario = new Usuario(req.body.name, req.body.companId, req.body.permissions, req.body.email, req.body.photo, req.body.token);
         this.uService.addUser(usuario)
         res.json(usuario)
     }
