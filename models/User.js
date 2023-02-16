@@ -8,7 +8,7 @@ const UsuarioSchema = mongoose.Schema({
     email: String,
     token: String,
     companId: String,
-    permissions: String,
+    permissions: String
 
 }, { timestamps: true })
 
